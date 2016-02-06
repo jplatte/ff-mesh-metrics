@@ -29,7 +29,7 @@ genMetrics (GraphJson (GraphData _ links multigraph nodes directed) version) =
 
 genMetrics' :: [Node] -> [Link] -> Value
 genMetrics' nodes links = object
-    [ "link_count"   .= length links
+    [ "link_count"   .= length (filter (not . vpn) links)
     --, "mesh_rate"    .= undefined
     --, "meshsize_max" .= undefined
     --, "meshsize_avg" .= undefined
