@@ -11,8 +11,8 @@ A small program that parses graph.json from ffmap-backend and outputs some metri
 
 ## How to use
 
-Here is an example for how to integrate the data from this program into graphite,
-using a carbon line-feed socket. Requires `jshon` and `nc` (netcat).
+Here is an example for how to integrate the data from this program into graphite,  
+using the carbon plaintext protocol. Requires `jshon` and `nc` (netcat).
 
 ```bash
 #!/bin/bash
