@@ -20,7 +20,7 @@ data GraphJson = GraphJson
 instance FromJSON GraphJson
 
 data GraphData = GraphData
-    { graph      :: [Value]
+    { graph      :: Value
     , links      :: [Link]
     , multigraph :: Bool
     , nodes      :: [Node]
