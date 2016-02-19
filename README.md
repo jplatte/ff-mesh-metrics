@@ -37,3 +37,14 @@ done
 
 nc -q0 $carbonHost $carbonPort <<< "$carbonInput"
 ```
+
+## How is this 'Mesh rate' calculated?
+
+- If there are less than 2 nodes, it's undefined (null in the json output)
+- Otherwise, it is `(nodes - subnets) / (nodes - 1)`
+
+Where subnets is the amount of physically independent nodes or meshes. If that description
+doesn't make much sense to you, here is a graphic of 7 nodes forming 3 subnets. The mesh
+rate here would be 66.66%.
+
+![7 nodes in 3 subnets](img/subnets.png)
